@@ -7,7 +7,7 @@ const HeaderSection = ({
   subtitle: String;
 }) => {
   return (
-    <header className="relative h-screen text-white overflow-hidden">
+    <header className="relative h-96 text-white overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={"/hero.jpg"}

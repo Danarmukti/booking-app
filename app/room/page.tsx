@@ -15,7 +15,7 @@ const RoomPage = () => {
       <HeaderSection
         title={"Room & Rates"}
         subtitle={"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
-      ></HeaderSection>
+      />
       <div className="mt-10 px-4">
         <Suspense fallback={<RoomSkeleton />}>
           <Main></Main>

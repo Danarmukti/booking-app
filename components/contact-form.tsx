@@ -1,9 +1,10 @@
 "use client";
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { ContactMessage } from "@/lib/action";
 
 const ContactForm = () => {
   const [state, formAction] = useActionState(ContactMessage, null);
+  const [isLoading, Loading] = useState();
   return (
     <div className="bg-white p-8 rounded-sm shadow-sm">
       {state?.message ? (
