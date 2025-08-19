@@ -34,7 +34,7 @@ const ContactPage = () => {
             </p>
             <ul className="list-item space-y-6 pt-8">
               <li className="flex gap-5">
-                <div className="flex-none bg-gray-300 p-3 shadow-sm rounded-sm">
+                <div className="flex-none bg-blue-500 text-white p-3 shadow-sm rounded-md">
                   <IoMailOutline className="size-7" />
                 </div>
                 <div className="flex-1">
@@ -43,7 +43,7 @@ const ContactPage = () => {
                 </div>
               </li>
               <li className="flex gap-5">
-                <div className="flex-none bg-gray-300 p-3 shadow-sm rounded-sm">
+                <div className="flex-none bg-blue-500 text-white p-3 shadow-sm rounded-md">
                   <IoCallOutline className="size-7" />
                 </div>
                 <div className="flex-1">
@@ -52,7 +52,7 @@ const ContactPage = () => {
                 </div>
               </li>
               <li className="flex gap-5">
-                <div className="flex-none bg-gray-300 p-3 shadow-sm rounded-sm">
+                <div className="flex-none bg-blue-500 text-white p-3 shadow-sm rounded-md">
                   <IoLocationOutline className="size-7" />
                 </div>
                 <div className="flex-1">

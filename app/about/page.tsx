@@ -11,12 +11,6 @@ const AboutPage = () => {
       />
       <div className="max-w-screen-xl mx-auto py-20 px-4">
         <div className="grid md:grid-cols-2 gap-8">
-          <Image
-            src={"/about-image.jpg"}
-            width={650}
-            height={579}
-            alt="about image"
-          ></Image>
           <div>
             <h1 className="text-5xl font-semibold text-gray-900 mb-4">
               Who We Are
@@ -54,6 +48,13 @@ const AboutPage = () => {
               </li>
             </ul>
           </div>
+          <Image
+            src={"/about-us.webp"}
+            width={650}
+            height={550}
+            alt="about image"
+            className="rounded-xl"
+          ></Image>
         </div>
       </div>
     </div>

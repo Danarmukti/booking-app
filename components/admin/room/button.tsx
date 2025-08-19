@@ -6,7 +6,7 @@ export const EditButton = ({ id }: { id: string }) => {
   return (
     <Link
       href={`/admin/room/edit/${id}`}
-      className="rounded-sm p-1 bg-orange-400 text-white hover:bg-amber-500"
+      className="rounded-sm p-1 bg-blue-500 text-white hover:bg-blue-600"
     >
       <IoPencil className="size-5"></IoPencil>
     </Link>

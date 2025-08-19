@@ -10,7 +10,7 @@ const HeaderSection = ({
     <header className="relative h-96 text-white overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={"/hero.jpg"}
+          src={"/about-us.webp"}
           alt="hero image"
           fill
           className="object-cover object-center w-full h-full"

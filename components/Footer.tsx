@@ -81,7 +81,7 @@ const Footer = () => {
                   className="w-full mb-5 p-3 rounded-sm bg-white"
                   placeholder="johndoe@gmail.com"
                 />
-                <button className="bg-orange-400 p-3 font-bold text-white w-full text-center rounded-sm hover:bg-orange-500">
+                <button className="bg-blue-500 p-3 font-bold text-white w-full text-center rounded-sm hover:bg-blue-600 cursor-pointer transition-all duration-150">
                   Subscribe
                 </button>
               </div>

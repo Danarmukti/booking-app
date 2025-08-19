@@ -47,7 +47,7 @@ const Navlink = () => {
           <li>
             <Link
               href={"/"}
-              className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+              className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150"
             >
               Home
             </Link>
@@ -55,7 +55,7 @@ const Navlink = () => {
           <li>
             <Link
               href={"/about"}
-              className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+              className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150 "
             >
               About
             </Link>
@@ -63,7 +63,7 @@ const Navlink = () => {
           <li>
             <Link
               href={"/room"}
-              className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+              className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150 "
             >
               Rooms
             </Link>
@@ -71,7 +71,7 @@ const Navlink = () => {
           <li>
             <Link
               href={"/contact"}
-              className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+              className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150 "
             >
               Contact
             </Link>
@@ -81,7 +81,7 @@ const Navlink = () => {
               <li>
                 <Link
                   href={"/myreservation"}
-                  className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+                  className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150 "
                 >
                   My Reservation
                 </Link>
@@ -91,7 +91,7 @@ const Navlink = () => {
                   <li>
                     <Link
                       href={"/admin/dashboard"}
-                      className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+                      className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150 "
                     >
                       Dashboard
                     </Link>
@@ -99,7 +99,7 @@ const Navlink = () => {
                   <li>
                     <Link
                       href={"/admin/room"}
-                      className="block py-2 px-3 text-gray-800 hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-0"
+                      className="block py-2 px-3 text-gray-800 relative after:absolute after:origin-center after:scale-x-0 hover:after:scale-x-100 after:bg-blue-400 after:rounded-full after:bottom-0 after:left-0 after:h-[3px] after:w-full hover:bg-gray-100 rounded-sm md:hover:bg-transparent md:p-1 after:transition-all after:duration-150 "
                     >
                       Manage Room
                     </Link>
@@ -112,7 +112,7 @@ const Navlink = () => {
             <li className="pt-4 md:pt-0">
               <button
                 onClick={() => signOut()}
-                className="md:hidden py-2.5 px-6 bg-red-400 text-white hover:bg-red-500 rounded-sm cursor-pointer"
+                className="md:hidden py-2.5 px-6 bg-red-400 text-white hover:bg-red-500 rounded-sm cursor-pointer transition-all duration-150"
               >
                 Sign Out
               </button>
@@ -121,7 +121,7 @@ const Navlink = () => {
             <li className="pt-4 md:pt-0">
               <Link
                 href={"/signin"}
-                className="py-2.5 px-6 bg-orange-400 text-white hover:bg-orange-500 rounded-sm"
+                className="py-2.5 px-6 bg-blue-400 text-white hover:bg-blue-500 rounded-sm transition-all duration-150 "
               >
                 Sign In
               </Link>

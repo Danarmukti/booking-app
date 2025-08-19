@@ -87,7 +87,7 @@ const ReserveForm = ({ room }: { room: RoomDetailProps }) => {
         <button
           type="submit"
           className={clsx(
-            "px-10 py-3 text-center font-semibold text-white w-full bg-orange-400 rounded-sm cursor-pointer hover:bg-orange-500 ",
+            "px-10 py-3 text-center font-semibold text-white w-full bg-blue-500 rounded-sm cursor-pointer hover:bg-blue-600 transition-all duration-150",
             { "opacity-50 cursor-progress": isPending }
           )}
           disabled={isPending}

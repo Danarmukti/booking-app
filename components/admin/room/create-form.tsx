@@ -196,7 +196,7 @@ const CreateForm = ({ amenities }: { amenities: Amenities[] }) => {
           <button
             type="submit"
             className={clsx(
-              "bg-orange-400 text-white w-full hover:bg-orange-500 py-2.5 px-6 md:px-10 text-lg font-semibold cursor-pointer",
+              "bg-blue-500 text-white w-full hover:bg-blue-600 rounded-xl transition-all duration py-2.5 px-6 md:px-10 text-lg font-semibold cursor-pointer",
               { "opacity-50 cursor-progress": isPending }
             )}
             disabled={isPending}
