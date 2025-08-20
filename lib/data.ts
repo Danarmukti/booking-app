@@ -87,3 +87,126 @@ export const getReservationById = async (id: string) => {
     console.log(error);
   }
 };
+
+export const getDisabledRoomById = async (roomId: string) => {
+  try {
+    const result = await prisma.reservation.findMany({
+      select: {
+        startDate: true,
+        endDate: true,
+      },
+      where: {
+        roomId: roomId,
+        Payment: { status: { not: "failure" } },
+      },
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getReservationByUserId = async () => {
+  const session = await auth();
+  if (!session || !session.user || !session.user.id) {
+    throw new Error("unauthorized Access");
+  }
+  try {
+    const result = await prisma.reservation.findMany({
+      where: { userId: session.user.id },
+      include: {
+        Room: {
+          select: {
+            name: true,
+            image: true,
+            price: true,
+          },
+        },
+        User: {
+          select: {
+            name: true,
+            email: true,
+            phone: true,
+          },
+        },
+        Payment: true,
+      },
+      orderBy: { createdAt: "desc" },
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getRevenueAndReserve = async () => {
+  try {
+    const result = await prisma.reservation.aggregate({
+      _count: true,
+      _sum: { price: true },
+      where: {
+        Payment: { status: { not: "failure" } },
+      },
+    });
+    return {
+      revenue: result._sum.price || 0,
+      reserve: result._count,
+    };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getTotalCustomer = async () => {
+  try {
+    const result = await prisma.reservation.findMany({
+      distinct: ["userId"],
+      where: {
+        Payment: { status: { not: "failure" } },
+      },
+      select: {
+        userId: true,
+      },
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getReservation = async () => {
+  const session = await auth();
+  if (
+    !session ||
+    !session.user ||
+    !session.user.id ||
+    session.user.role !== "admin"
+  ) {
+    throw new Error("unauthorized Access");
+  }
+  try {
+    const result = await prisma.reservation.findMany({
+      include: {
+        Room: {
+          select: {
+            name: true,
+            image: true,
+            price: true,
+          },
+        },
+        User: {
+          select: {
+            name: true,
+            email: true,
+            phone: true,
+          },
+        },
+        Payment: true,
+      },
+      orderBy: { createdAt: "desc" },
+    });
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};

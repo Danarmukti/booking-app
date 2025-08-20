@@ -1,5 +1,6 @@
 "use client";
 import { reservationProps } from "@/types/reservation";
+import clsx from "clsx";
 import { useTransition } from "react";
 
 declare global {
@@ -32,9 +33,13 @@ const PaymentButton = ({ reservation }: { reservation: reservationProps }) => {
   return (
     <button
       onClick={handlePayment}
-      className="px-10 py-4 mt-2 text-center font-semibold text-white w-full bg-orange-400 rounded-sm hover:bg-orange-500 cursor-pointer"
+      className={clsx(
+        "px-10 py-4 mt-2 text-center font-semibold text-white w-full bg-blue-500 rounded-sm hover:bg-blue-600 transition-all duration-150 cursor-pointer",
+        { "opacity-50 cursor-progress": isPending }
+      )}
+      disabled={isPending}
     >
-      Process Payment
+      {isPending ? "Processing..." : "Process Payment"}
     </button>
   );
 };

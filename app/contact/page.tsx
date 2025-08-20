@@ -4,8 +4,6 @@ import HeaderSection from "@/components/Header-section";
 import {
   IoMailOutline,
   IoCallOutline,
-  IoLocateOutline,
-  IoLocation,
   IoLocationOutline,
 } from "react-icons/io5";
 import ContactForm from "@/components/contact-form";

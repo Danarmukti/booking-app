@@ -7,7 +7,7 @@ import Image from "next/image";
 import { BarLoader } from "react-spinners";
 import { Amenities } from "@/app/generated/prisma";
 import { useActionState } from "react";
-import { saveRoom, updateRoom } from "@/lib/action";
+import { updateRoom } from "@/lib/action";
 import clsx from "clsx";
 import { RoomProps } from "@/types/room";
 

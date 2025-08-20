@@ -28,7 +28,7 @@ const Hero = () => {
             Book Now
           </Link>
           <Link
-            href={"/room"}
+            href={"/contact"}
             className="bg-transparent  rounded-2xl transition-all duration-150 border border-blue-400 text-white hover:bg-blue-500 py-2 px-6 md:px-10 text-lg font-semibold hover:scale-105 hover:shadow-lg"
           >
             Contact Us
