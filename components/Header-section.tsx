@@ -3,8 +3,8 @@ const HeaderSection = ({
   title,
   subtitle,
 }: {
-  title: String;
-  subtitle: String;
+  title: string;
+  subtitle: string;
 }) => {
   return (
     <header className="relative h-96 text-white overflow-hidden">

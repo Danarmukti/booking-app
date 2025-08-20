@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { PaymentProps } from "@/types/payment";
 import crypto from "crypto";
-import { error } from "console";
 
 export const POST = async (request: Request) => {
   const data: PaymentProps = await request.json();
@@ -63,6 +62,7 @@ export const POST = async (request: Request) => {
       },
       where: { reservationId },
     });
+    responseData = transaction;
   } else if (transactionStatus == "pending") {
     const transaction = await prisma.payment.update({
       data: {

@@ -1,4 +1,3 @@
-import CreateForm from "@/components/admin/room/create-form";
 import CreateRoom from "@/components/admin/room/create-room";
 
 const CreateRoomPage = () => {
