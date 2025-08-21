@@ -20,6 +20,7 @@ const ReserveForm = ({
   const [startDate, setStartDate] = useState(StartDate);
   const [endDate, setEndDate] = useState(EndDate);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleDateChange = (dates: any) => {
     const [start, end] = dates;
     setStartDate(start);
@@ -56,7 +57,7 @@ const ReserveForm = ({
             selectsRange={true}
             onChange={handleDateChange}
             excludeDateIntervals={excludeDates}
-            dateFormat={"dd-MM-YYYY"}
+            dateFormat="dd-MM-YYYY"
             wrapperClassName="w-full"
             className="py-2 px-4 rounded-md border border-gray-300 w-full"
           />
