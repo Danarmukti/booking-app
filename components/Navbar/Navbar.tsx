@@ -9,7 +9,7 @@ function Navbar() {
       <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
         <Link href={"/"}>
           <Image
-            src={"/logo.png"}
+            src={"/logo-01.png"}
             width={128}
             height={49}
             alt={"logo"}

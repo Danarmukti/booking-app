@@ -41,7 +41,7 @@ const Card = ({ room }: { room: Room }) => {
           </div>
           <Link
             href={`/room/${room.id}`}
-            className="px-6 py-2.5 md:px-10 md:py-3 font-semibold text-white bg-blue-500 rounded-sm hover:bg-blue-600 transition duration-150"
+            className="px-6 py-2.5 md:px-10 md:py-3 font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition duration-150"
           >
             Book Now
           </Link>
