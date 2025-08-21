@@ -5,7 +5,7 @@ import { IoCloudUploadOutline, IoTrashOutline } from "react-icons/io5";
 import { type PutBlobResult } from "@vercel/blob";
 import Image from "next/image";
 import { BarLoader } from "react-spinners";
-import { Amenities } from "@/app/generated/prisma";
+import { Amenities } from "@prisma/client";
 import { useActionState } from "react";
 import { updateRoom } from "@/lib/action";
 import clsx from "clsx";
@@ -64,7 +64,9 @@ const EditForm = ({
     null
   );
 
-  const checkAmenities = room.RoomAmenities.map((item) => item.amenitiesId);
+  const checkAmenities = room.RoomAmenities.map(
+    (item: { amenitiesId: number }) => item.amenitiesId
+  );
 
   return (
     <form action={formAction}>
@@ -210,7 +212,7 @@ const EditForm = ({
           <button
             type="submit"
             className={clsx(
-              "bg-blue-500 text-white w-full hover:bg-blue-600 py-2.5 px-6 md:px-10 text-lg font-semibold cursor-pointer",
+              "bg-blue-500 text-white w-full rounded-xl transition-all duration-150 hover:bg-blue-600 py-2.5 px-6 md:px-10 text-lg font-semibold cursor-pointer",
               { "opacity-50 cursor-progress": isPending }
             )}
             disabled={isPending}
