@@ -64,9 +64,7 @@ const EditForm = ({
     null
   );
 
-  const checkAmenities = room.RoomAmenities.map(
-    (item: { amenitiesId: number }) => item.amenitiesId
-  );
+  const checkAmenities = room.RoomAmenities.map((item) => item.amenitiesId);
 
   return (
     <form action={formAction}>
